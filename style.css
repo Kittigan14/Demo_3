@@ -34,7 +34,7 @@ body {
 }
 
 #projects {
-    scroll-margin-top: 160px;
+    scroll-margin-top: 120px;
 }
 
 #contact {
@@ -42,7 +42,7 @@ body {
 }
 
 #skills {
-    scroll-margin-top: 300px;
+    scroll-margin-top: 360px;
 }
 
 a {
@@ -360,32 +360,45 @@ section {
 }
 
 /* ===== LISTS & ITEMS ===== */
-.skills-list {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: clamp(1rem, 2vw, 1.25rem);
-    margin-top: 1.5rem;
-    padding-left: 0 !important;
+.skill-main {
+    width: 600px;
+    display: flex;
+    overflow-x: auto;
+    
+    .skills-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        list-style: none;
+        animation: spin 15s linear infinite;
 
-    li {
-        padding: clamp(0.75rem, 2vw, 1rem) clamp(1.25rem, 2vw, 1.75rem);
-        background: rgba(132, 250, 176, 0.08);
-        border-left: 3px solid #84fab0;
-        border-radius: 0.5rem;
-        color: rgba(255, 255, 255, 0.95);
-        font-weight: 500;
-        font-size: clamp(0.9rem, 2vw, 1rem);
-        text-align: center;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        .list {
+            width: 150px;
+            height: 5em;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(132, 250, 176, 0.08);
+            border-radius: 0.5rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-        &:hover {
-            background: rgba(132, 250, 176, 0.15);
-            transform: translateX(5px);
-            box-shadow: 0 4px 12px rgba(132, 250, 176, 0.2);
+            &:hover {
+                background: rgba(132, 250, 176, 0.15);
+                transform: translateX(5px);
+                box-shadow: 0 4px 12px rgba(132, 250, 176, 0.2);
+            }
         }
     }
+}
+
+.skill-main::-webkit-scrollbar {
+    display: none;
 }
 
 .experience-item,
@@ -424,6 +437,23 @@ section {
         margin-bottom: 0;
         padding-bottom: 0;
         border-bottom: none;
+    }
+
+    .btnViewport {
+        display: inline-block;
+        margin-top: 0.5rem;
+        padding: 0.4em 1.2em;
+        border-radius: 999px;
+        background: #84fab0;
+        color: #111;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-2px) scale(1.05);
+            background: #68e89a;
+        }
     }
 }
 

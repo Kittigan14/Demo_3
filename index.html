@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Kittikarn Iwai Namdokmai</title>
-    <link rel="stylesheet" href="Test.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
 </head>
 
@@ -59,36 +59,48 @@
                 <div class="content-image">
                     <picture>
                         <source
-                            srcset="https://images.unsplash.com/photo-1661961112835-ca6f5811d2af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+                            srcset="./images/image2.jpg"
                             media="(min-width: 1000px)">
                         <source
-                            srcset="https://images.unsplash.com/photo-1647849754185-2b52aec8458b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+                            srcset="./images/image3.jpg"
                             media="(min-width: 700px)">
                         <img class="ukiyo img-size-full"
-                            src="https://images.unsplash.com/photo-1504051771394-dd2e66b2e08f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+                            src="./images/image4.jpg"
                             alt="Skills">
                     </picture>
                 </div>
                 <div class="content-text">
                     <h3 id="skills">Technical Skills</h3>
                     <p>I specialize in front-end development with a strong foundation in:</p>
-                    <ul class="skills-list">
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript & React</li>
-                        <li>Python</li>
-                        <li>PHP & Laravel</li>
-                        <li>UI/UX Design</li>
-                        <li>Responsive Web Design</li>
-                        <li>Git & Version Control</li>
-                        <li>Web Performance Optimization</li>
-                    </ul>
+                    <div class="skill-main">
+                        <ul class="skills-list">
+                            <li class="list" >HTML5 & CSS3</li>
+                            <li class="list" >JavaScript & React</li>
+                            <li class="list" >Python</li>
+                            <li class="list" >PHP & Laravel</li>
+                            <li class="list" >UI/UX Design</li>
+                            <li class="list" >Responsive Web Design</li>
+                            <li class="list" >Git & Version Control</li>
+                            <li class="list" >Web Performance Optimization</li>
+                        </ul>
+                        <ul aria-hidden class="skills-list">
+                            <li class="list" >HTML5 & CSS3</li>
+                            <li class="list" >JavaScript & React</li>
+                            <li class="list" >Python</li>
+                            <li class="list" >PHP & Laravel</li>
+                            <li class="list" >UI/UX Design</li>
+                            <li class="list" >Responsive Web Design</li>
+                            <li class="list" >Git & Version Control</li>
+                            <li class="list" >Web Performance Optimization</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             <div class="content-row">
                 <div class="content-image">
                     <img class="ukiyo img-size-1 img-position-l"
-                        src="https://images.unsplash.com/photo-1663094615740-322d2a238949?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+                        src="./images/image5.jpg"
                         alt="Experience">
                 </div>
                 <div class="content-text">
@@ -119,7 +131,7 @@
             <div class="content-row reverse">
                 <div class="content-image">
                     <img class="ukiyo img-size-full"
-                        src="https://images.unsplash.com/photo-1516575150278-77136aed6920?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+                        src="./images/image4.jpg"
                         alt="Projects">
                 </div>
                 <div class="content-text">
@@ -134,24 +146,30 @@
                             processing,
                             and an admin dashboard to support real-world usage.
                         </p>
+
+                        <a class="btnViewport" href="https://github.com/Kittigan14/E-commerce.git"> View Project </a>
                     </div>
 
                     <div class="project-item">
-                        <h4>Movie Review Website</h4>
+                        <h4>Movie Review Website (Node Js)</h4>
                         <p>
                             Built a web-based movie review platform where users can review their favorite movies,
                             give ratings, and post comments to share opinions and engage with other users.
                             Designed with usability and content interaction in mind.
                         </p>
+
+                        <a class="btnViewport" href="https://github.com/Kittigan14/Web-Page-Review-Movie.git"> View Project </a>
                     </div>
 
                     <div class="project-item">
-                        <h4>University Information Chatbot</h4>
+                        <h4>University Information Chatbot (React Js)</h4>
                         <p>
                             Designed and developed a modern web interface integrated with a chatbot system
                             for answering university-related questions.
                             Utilized n8n to manage chatbot workflows and automate responses efficiently.
                         </p>
+
+                        <a class="btnViewport" href="https://github.com/Kittigan14/ask-kmutnb.git"> View Project </a>
                     </div>
                 </div>
 
@@ -160,7 +178,7 @@
             <div class="content-row">
                 <div class="content-image">
                     <img class="ukiyo img-size-1 img-position-l"
-                        src="https://images.unsplash.com/photo-1516575150278-77136aed6920?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+                        src="./images/Image4.jpg"
                         alt="Education">
                 </div>
                 <div class="content-text">
@@ -182,7 +200,7 @@
             <div class="content-row reverse">
                 <div class="content-image">
                     <img class="ukiyo img-position-r img-size-2"
-                        src="https://images.unsplash.com/photo-1638395976479-edd103e980bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+                        src="./images/image3.jpg"
                         alt="Contact">
                 </div>
                 <div class="content-text">
@@ -193,8 +211,9 @@
                         <p><strong>Email:</strong> kittikarn.iwai@gmail.com</p>
                         <p><strong>Phone:</strong> 062-257-4383</p>
                         <p><strong>Location:</strong> Bangkok, Thailand</p>
-                        <p><strong>GitHub:</strong> <a href="https://github.com/Kittigan14"
-                                target="_blank">github.com/Kittigan14</a></p>
+                        <p><strong>Facebook:</strong> Kittigan Iwai</p>
+                        <p><strong>Instagram:</strong> xivmmiii_kitti</p>
+                        <p><strong>GitHub:</strong> <a href="https://github.com/Kittigan14" target="_blank">github.com/Kittigan14</a></p>
                     </div>
                 </div>
             </div>
@@ -207,7 +226,7 @@
         </footer>
     </div>
 
-    <script type="module" src="Test.js"></script>
+    <script type="module" src="script.js"></script>
 
 </body>
 
