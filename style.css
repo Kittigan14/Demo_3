@@ -364,7 +364,7 @@ section {
     width: 600px;
     display: flex;
     overflow-x: auto;
-    
+
     .skills-list {
         display: flex;
         align-items: center;
@@ -397,6 +397,7 @@ section {
     }
 }
 
+body::-webkit-scrollbar, 
 .skill-main::-webkit-scrollbar {
     display: none;
 }
