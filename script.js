@@ -50,3 +50,22 @@ const animateElements = document.querySelectorAll(".content-text, .content-image
 animateElements.forEach((el) => {
   observer.observe(el);
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const targetId = anchor.getAttribute("href");
+    const targetEl = document.querySelector(targetId);
+
+    if (targetEl) {
+      lenis.scrollTo(targetEl, {
+        offset: -120,
+        duration: 1.4,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+      });
+
+    }
+  });
+});
+
