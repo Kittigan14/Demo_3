@@ -11,6 +11,12 @@
 
 <body>
 
+    <button class="arrow-down-btn" id="arrowDownBtn" aria-label="Scroll to next section">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+
     <div class="heading">
         <h1>Portfolio <p>Kittikarn Iwai Namdokmai</p>
         </h1>
@@ -20,6 +26,7 @@
                 <li><a class="nav-list" href="#home">Home</a></li>
                 <li><a class="nav-list" href="#about">About</a></li>
                 <li><a class="nav-list" href="#skills">Skills</a></li>
+                <li><a class="nav-list" href="#experience">Experience</a></li>
                 <li><a class="nav-list" href="#projects">Projects</a></li>
                 <li><a class="nav-list" href="#contact">Contact</a></li>
             </ul>
@@ -29,7 +36,8 @@
     </div>
 
     <div id="container">
-        <section class="fv" id="home">
+        <!-- HOME SECTION -->
+        <section class="fv" id="home" data-section="home">
             <div class="fv-content">
                 <h2>Hello, I'm Kittikarn</h2>
                 <h3>IT Student & Front-End Developer</h3>
@@ -41,10 +49,11 @@
             </div>
         </section>
 
-        <section class="content" id="about">
+        <!-- ABOUT SECTION -->
+        <section class="content" id="about" data-section="about">
             <div class="content-row">
                 <div class="content-image">
-                    <img class="ukiyo img-size-1 img-position-l" data-u-speed="1.3" src="./images/Image.jpg"
+                    <img class="ukiyo img-size-1 img-position-l" data-u-speed="1.3" src="./images/Img1.jpg"
                         alt="About">
                 </div>
                 <div class="content-text">
@@ -59,14 +68,17 @@
                     </p>
                 </div>
             </div>
+        </section>
 
-            <div class="content-row reverse" id="skills">
+        <!-- SKILLS SECTION -->
+        <section class="content" id="skills" data-section="skills">
+            <div class="content-row reverse">
                 <div class="content-image">
                     <picture>
-                        <source srcset="./images/image2.jpg" media="(min-width: 1000px)">
-                        <source srcset="./images/image3.jpg" media="(min-width: 700px)">
-                        <img class="ukiyo img-size-full" src="./images/image4.jpg" alt="Skills">
+                        <!-- <source srcset="./images/Img2.jpg" media="(min-width: 1000px)">
+                        <source srcset="./images/Img3.jpg" media="(min-width: 700px)"> -->
                     </picture>
+                    <img class="ukiyo img-size-full" src="./images/Img2.jpg" alt="Skills">
                 </div>
                 <div class="content-text">
                     <h3>Technical Skills</h3>
@@ -95,10 +107,13 @@
                     </div>
                 </div>
             </div>
+        </section>
 
+        <!-- EXPERIENCE SECTION -->
+        <section class="content" id="experience" data-section="experience">
             <div class="content-row">
                 <div class="content-image">
-                    <img class="ukiyo img-size-1 img-position-l" src="./images/image5.jpg" alt="Experience">
+                    <img class="ukiyo img-size-1 img-position-l" src="./images/Img3.jpg" alt="Experience">
                 </div>
                 <div class="content-text">
                     <h3>Experience</h3>
@@ -124,10 +139,13 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="content-row reverse" id="projects">
+        <!-- PROJECTS SECTION -->
+        <section class="content" id="projects" data-section="projects">
+            <div class="content-row reverse">
                 <div class="content-image">
-                    <img class="ukiyo img-size-full" src="./images/image4.jpg" alt="Projects">
+                    <img class="ukiyo img-size-full" src="./images/Img4.jpg" alt="Projects">
                 </div>
                 <div class="content-text">
                     <h3>Featured Projects</h3>
@@ -168,12 +186,14 @@
                         <a class="btnViewport" href="https://github.com/Kittigan14/ask-kmutnb.git"> View Project </a>
                     </div>
                 </div>
-
             </div>
+        </section>
 
+        <!-- EDUCATION SECTION (Optional - ไม่ได้อยู่ใน navigation) -->
+        <section class="content" data-section="education">
             <div class="content-row">
                 <div class="content-image">
-                    <img class="ukiyo img-size-1 img-position-l" src="./images/Image4.jpg" alt="Education">
+                    <img class="ukiyo img-size-1 img-position-l" src="./images/Img5.jpg" alt="Education">
                 </div>
                 <div class="content-text">
                     <h3>Education</h3>
@@ -190,14 +210,17 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="content-row reverse" >
+        <!-- CONTACT SECTION -->
+        <section class="content" id="contact" data-section="contact">
+            <div class="content-row reverse">
                 <div class="content-image">
-                    <img class="ukiyo img-position-r img-size-2" src="./images/image3.jpg" alt="Contact">
+                    <img class="ukiyo img-position-r img-size-2" src="./images/Img6.jpg" alt="Contact">
                 </div>
                 <div class="content-text">
                     <h3>Get In Touch</h3>
-                    <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out!
+                    <p>Thank you for taking the time to consider my Web Portfolio and look forward to the opportunity to work with your team.
                     </p>
                     <div class="contact-info">
                         <p><strong>Email:</strong> kittigan1486@gmail.com</p>

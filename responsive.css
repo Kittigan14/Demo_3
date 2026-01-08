@@ -18,7 +18,7 @@
 /* ===== TABLET (max-width: 1024px) ===== */
 @media screen and (max-width: 1024px) {
     .heading {
-        display: none;
+        /* display: none; */
 
         h1 {
             font-size: clamp(1.2rem, 3.5vw, 1.8rem);
@@ -112,6 +112,11 @@
         background-size: 3em 3em;
     }
 
+    /* แสดง Arrow Down Button บน Mobile */
+    .arrow-down-btn {
+        display: block;
+    }
+
     .heading {
         flex-direction: row;
         justify-content: space-between;
@@ -125,7 +130,7 @@
 
         h1 {
             font-size: 1.3rem;
-            
+
             p {
                 display: none;
             }
@@ -176,7 +181,7 @@
             }
         }
 
-        > a {
+        >a {
             font-size: 0.75rem;
             padding: 0.5em 1.2em;
         }
@@ -244,7 +249,8 @@
         gap: 2rem;
         margin-bottom: 5rem;
         height: auto;
-        min-height: auto;
+        min-height: unset;
+        padding-bottom: 80px; /* เพิ่มพื้นที่ด้านล่างสำหรับ Arrow Button */
 
         &.reverse {
             .content-image {
@@ -279,6 +285,18 @@
         opacity: 1;
     }
 
+    /* #skills .content-image {
+        display: none;
+    } */
+
+    #skills .content-text {
+        
+        p {
+            width: 300px;
+        }
+
+    }
+
     .content-text {
         padding: clamp(1.5rem, 3vw, 2rem);
 
@@ -300,23 +318,16 @@
         p {
             margin-bottom: 1rem;
         }
+
     }
 
     .skill-main {
-        width: 100%;
-        max-width: 100%;
-        overflow: visible;
+        width: 320px;
+        overflow: hidden;
         padding: 1rem 0;
 
         .skills-list {
             gap: 0.8em;
-            /* flex-wrap: wrap;
-            justify-content: flex-start;
-            animation: fadeInUp 0.8s ease-out;
-
-            &[aria-hidden="true"] {
-                display: none;
-            } */
 
             .list {
                 width: calc(50% - 0.4em);
@@ -412,7 +423,7 @@
             }
         }
 
-        > a {
+        >a {
             font-size: 0.7rem;
             padding: 0.35em 0.9em;
         }
@@ -655,7 +666,8 @@
     }
 
     .heading,
-    footer {
+    footer,
+    .arrow-down-btn {
         display: none;
     }
 

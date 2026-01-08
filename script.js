@@ -64,8 +64,73 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         duration: 1.4,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
       });
-
     }
   });
 });
 
+const arrowBtn = document.getElementById('arrowDownBtn');
+let currentSection = 'home';
+
+const navigationMap = {
+  'home': null,
+  'about': 'skills',
+  'skills': 'experience',
+  'experience': 'projects',
+  'projects': 'contact',
+  'contact': 'home'
+};
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const sectionName = entry.target.getAttribute('data-section');
+      if (sectionName) {
+        currentSection = sectionName;
+        console.log('Current section:', currentSection);
+        updateArrowButton();
+      }
+    }
+  });
+}, {
+  threshold: 0.3,
+  rootMargin: '-15% 0px -15% 0px'
+});
+
+document.querySelectorAll('[data-section]').forEach(section => {
+  sectionObserver.observe(section);
+});
+
+function updateArrowButton() {
+  if (!arrowBtn) return;
+  
+  if (currentSection === 'home' || window.innerWidth > 768) {
+    arrowBtn.style.display = 'none';
+  } else {
+    arrowBtn.style.display = 'block';
+  }
+}
+
+if (arrowBtn) {
+  arrowBtn.addEventListener('click', () => {
+    const nextSection = navigationMap[currentSection];
+    
+    if (nextSection) {
+      const targetElement = document.querySelector(`[data-section="${nextSection}"]`);
+      
+      if (targetElement) {
+        lenis.scrollTo(targetElement, {
+          offset: nextSection === 'home' ? 0 : -80,
+          duration: 1.2,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+        });
+      }
+    }
+  });
+}
+
+function checkViewport() {
+  updateArrowButton();
+}
+
+checkViewport();
+window.addEventListener('resize', checkViewport);
